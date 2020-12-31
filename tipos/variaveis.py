@@ -17,9 +17,12 @@ print(f'{dayofweek}')
 
 
 a, b = 0, 1
+
 fibonacci = []
-while a < 10000:
+
+while a < 100:
     print(a, end=',')
     a, b = b, a+b
     fibonacci.append(a)
+
 print('A sequencia de fibonacci é: ', fibonacci)
