@@ -2,7 +2,6 @@
 
 # import pacote.sub.arquivo
 
-# print('Bem vindo!')
 
 # from tipos import variaveis
 # from tipos import basicos
@@ -13,4 +12,6 @@
 # from operadores import unarios
 # from operadores import aritmeticos
 # from operadores import relacionais
-from operadores import logicos
+# from operadores import logicos
+
+print('Bem vindo!')
