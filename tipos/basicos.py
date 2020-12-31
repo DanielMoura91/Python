@@ -1,0 +1,5 @@
+print(type(29))
+print(type(58.9))
+print(type('Daniel'))
+print(type(True))
+print(type(False))
