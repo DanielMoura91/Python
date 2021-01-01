@@ -11,9 +11,6 @@ idade = 29
 print(texto + str(idade))
 print(f'{texto}{idade}')
 
-dayofweek = ['domingo', 'segunda', 'terça',
-             'quarta', 'quinta', 'sexta', 'sábado']
-print(f'{dayofweek}')
 
 """
 # Fibonacci series:
@@ -22,7 +19,7 @@ a, b = 0, 1
 while a < 10:
      print(a, end=',')
      a, b = b, a+b
-"""
+
 
 a, b = 0, 1
 
@@ -33,4 +30,5 @@ while a < 100:
     a = b 
     b = a+b    
 
-print('A sequencia de fibonacci é: ', fibonacci)
+print(f'A sequencia de fibonacci é {fibonacci}')
+"""
