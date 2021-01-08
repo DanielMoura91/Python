@@ -1,3 +1,3 @@
-# Python 3 - Curso Rápido [2021]
+# Python 3 - 2021
 
 Códigos simples para começar em Python
