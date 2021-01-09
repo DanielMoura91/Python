@@ -1,3 +1,3 @@
-# Python 3 - 2021
+# Python 3 
 
-Códigos simples para começar em Python
+Segue alguns algoritmos em Python sobre Análise de Dados, Web Scraping e outras funcionalidades.
