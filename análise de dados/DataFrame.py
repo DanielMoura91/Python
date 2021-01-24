@@ -6,9 +6,10 @@ df = pd.DataFrame(
             "Braund, Mr. Owen Harris",
             "Allen, Mr. William Henry",
             "Bonnell, Miss. Elizabeth",
+            "Alves, Mr. Daniel Moura",
         ],
-        "Idade": [22, 35, 58],
-        "Sexo": ["M", "M", "F"],
+        "Idade": [22, 35, 58, 29],
+        "Sexo": ["M", "M", "F", "M"],
     }
 )
 
