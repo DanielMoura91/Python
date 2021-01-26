@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import speech_recognition as sr
 from chatterbot.trainers import ListTrainer
 from chatterbot import ChatBot
+import comtypes.client as ct
 import requests as rq
 import string
 import random
@@ -10,17 +11,19 @@ import time
 import os
 
 r = sr.Recognizer()
+tts = ct.CreateObject("sapi.SPVoice")
 
-bot = ChatBot('Sexta-feira')
-bot.set_trainer(ListTrainer)
-bot.train(['Oi',
-           'Olá',
-           'Olá',
-           'Oi',
-           'Tudo bem?',
-           'Tudo, e com você?',
-           'Estou bem',
-           'Que bom', ])
+
+chatbot = ChatBot('Sexta-feira')
+trainer = ListTrainer(chatbot)
+trainer.train(['Oi',
+               'Oi Senhor',
+               'Olá',
+               'Olá Senhor',
+               'Tudo bem?',
+               'Tudo, e com você?',
+               'Estou bem',
+               'Que bom', ])
 
 
 def recVoz(r):
@@ -103,7 +106,7 @@ def wikipedia():
     texto = paragrafo.get_text()
     print('Sexta-feira: '+texto)
     pesquisa = (u""+texto)
-    tts.Speak(pesquisa)
+    tts.speak(pesquisa)
 
     def write(texto, busca, encoding='utf-8', errors='strict'):
         data = str(texto).encode(encoding, errors=errors)
@@ -158,7 +161,7 @@ def treinoExtra(bot):
     bot.train(extra)
 
 
-def main(args):
+def main():
     os.system('cls')
     print('\n\t\t.:: Assistente Virtual - Beta - by Daniel M. Alves ::.\n\n')
 
@@ -276,12 +279,6 @@ def main(args):
             elif speech == "gerar senha":
                 print("Senha: ", pass_generator())
                 time.sleep(5)
-                main()
-            elif speech == "Abrir filmes" or speech == "abrir filmes" or speech == "abrir filme" or speech == "assistir filmes":
-                stremio = (u"Abrindo programa de filmes")
-                tts.Speak(stremio)
-                stremio = 'C:\\Users\\danie\\AppData\\Local\\Programs\\LNV\\Stremio-4\\stremio.exe'
-                os.startfile(stremio)
                 main()
             elif speech == "me conte uma piada" or speech == "Me conte uma piada" or speech == "piada":
                 piadas()
