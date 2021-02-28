@@ -12,6 +12,7 @@ while True:
         soup = bs(page.content, 'html.parser')
 
         with open(busca+'.txt', 'wb') as f:
+            busca = busca.replace("_", ' ')
             print(f'\n:: {busca} ::\n')
             for cont in soup.find_all('p'):
                 texto = cont.get_text()
